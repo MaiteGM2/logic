@@ -107,11 +107,11 @@
         const loginTime = loginUser.getTime();
 
         if(loginTime >= timeDifference){
-            return `User ${user.id} logged in less than 30 minutes ago`;
+            return true;
         }
     }
  
-    return 'No user logged in less than 30 minutes ago';
+    return false;
    }
 
    console.log(timeSinceLogin(users));
