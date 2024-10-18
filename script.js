@@ -96,6 +96,26 @@
     }
    ]
    
+   function timeSinceLogin(users){
+    const currentDate = new Date();
+    const currentTime = currentDate.getTime();
+    const timeRange = 30;
+    const timeDifference = currentTime - (timeRange * 60000);
+
+    for(const user of users){
+        const loginUser = new Date(user.loginTime);
+        const loginTime = loginUser.getTime();
+
+        if(loginTime >= timeDifference){
+            return `User ${user.id} logged in less than 30 minutes ago`;
+        }
+    }
+ 
+    return 'No user logged in less than 30 minutes ago';
+   }
+
+   console.log(timeSinceLogin(users));
+   
       
       
       
