@@ -78,7 +78,24 @@
 
     console.log(passwordGenerator("19"));
     
+/*  2) Dada una lista de usuarios con su historial de logueo. Escribir una funcion que determine si algun usuario fue logueado dentro de los ultimos 30 minutos
+    La funcion debe recibir un parametro:
+      - `users`: un array de objetos, donde cada objeto tiene las siguientes propiedades:
+        - `id` (integer)
+        - `login_time` (datetime): tiempo en el cual el usuario se logueo por ultima vez en formato fecha
+   La funcion debe retornar true si un usuario se logueo en los ultimos 30 minutos */
 
+   const users = [
+    {
+        id: 1,
+        loginTime: "2015-03-25T12:00:00",
+    },
+    {
+        id: 2,
+        loginTime: "2024-10-18T10:10:00",
+    }
+   ]
+   
       
       
       
