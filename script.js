@@ -32,6 +32,9 @@
     Retornar true si es anagrama y false de lo contrario */
 
     function anagram(string1, string2){
+        if(typeof string1 != 'string' || typeof string2 != 'string'){
+            return 'Only strings are accepted';
+        }
         return string1.toLowerCase().split("").sort().join("") === string2.toLowerCase().split("").sort().join("");
     }
 
